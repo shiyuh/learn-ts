@@ -34,7 +34,13 @@
         * when we want a variable to have a type that cannot be inferred
         * when a function returns the "any" type and we need to clarify the value
             * avoid variables with 'any' **at all cost** because TS cannot do any typechecking
-        * see `/annotations/variables.ts` for examples 
+        * see `/annotations/variables.ts` for examples
+
+    * Annotations with functions and objects
+        * Type annotation for functions: code we add to tell TS what type of arguments a function will receive and what type of value it will return
+        * Type inference for functions: TS tries to figure out what type of value a function will return
+            * for arguments, we always have to use type annotation (no inference)
+            * type inference for return value but we won't use it, use annotation to catch error
 
 
 

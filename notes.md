@@ -52,4 +52,9 @@
     * flexible - arrays can still contain multiple different types
 * use arrays when we need to represent a collection of records with some arbitrary sort order
 
+# Tuple
+* array-like structure where each element represents some property of a record
+
+
+
 

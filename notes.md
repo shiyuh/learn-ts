@@ -43,4 +43,13 @@
             * type inference for return value but we won't use it, use annotation to catch error
 
 
+# Typed arrays
+* arrays containing consistent type of values
+* Why do we care?
+    * TS can do type inference when extracting values from an array
+    * TS can prevent us from adding incompatible values to the array
+    * can get help with `map`, `forEach`, `reduce` functions
+    * flexible - arrays can still contain multiple different types
+* use arrays when we need to represent a collection of records with some arbitrary sort order
+
 

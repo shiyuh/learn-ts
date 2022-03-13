@@ -61,4 +61,10 @@
     * create functions that accept arguments that are typed with interfaces
     * objects/classes can decide to implement a given interface to work with a function
 
+# Classes
+* blueprint to create an object with some fields (values) and methods (functions) to represent a 'thing'
+* modifiers (TS)
+    * `public`: this method can be called anywhere, any time
+    * `private`: this method can only be called by other methods inside the class
+    * `protected`: this method can be called by other methods in this class, or by other methods in child classes
 

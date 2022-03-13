@@ -55,6 +55,10 @@
 # Tuple
 * array-like structure where each element represents some property of a record
 
-
+# Interface
+* creates a new type, describing the property names and value types of an object
+* general strategy for code reuse in TS:
+    * create functions that accept arguments that are typed with interfaces
+    * objects/classes can decide to implement a given interface to work with a function
 
 

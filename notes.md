@@ -63,8 +63,31 @@
 
 # Classes
 * blueprint to create an object with some fields (values) and methods (functions) to represent a 'thing'
+* dual purpose: can also be used as type
 * modifiers (TS)
     * `public`: this method can be called anywhere, any time
     * `private`: this method can only be called by other methods inside the class
     * `protected`: this method can be called by other methods in this class, or by other methods in child classes
 
+# Other random notes
+* Typescript can make use of JS libraries, but it needs type definition files (adaptor between JS library and TS code)
+    * definitely typed naming scheme: @types/{library name}
+* string to float conversion: `parseFloat()`
+* export styles
+    * convention within typescript is to not use `export default`
+```javascript
+// Three different export styles
+export foo; // name export
+export default foo; // default export, only 1 default per file
+export = foo;
+
+// The three matching import styles
+import { foo } from 'blah';
+import foo from 'blah'; // can give this any name you like
+import * as foo from 'blah';
+```
+* Type definition files help TS understand 3rd party JS libraries such as those installed using npm
+    * Also for scripts included in HTML file (to help TS understand global variables available)
+* VSCode shortcut
+    * CMD+shift+p to bring up command palette, hide level 2 to collapse methods
+    * CMD+click to jump thru definitions and all

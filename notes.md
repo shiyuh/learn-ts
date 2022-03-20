@@ -88,6 +88,24 @@ import * as foo from 'blah';
 ```
 * Type definition files help TS understand 3rd party JS libraries such as those installed using npm
     * Also for scripts included in HTML file (to help TS understand global variables available)
+
+* How TS comipler works
+    * `tsc file.ts` will compile the ts file into equivalent js file
+    * to configure:
+        * run `tsc --init` to create `tsconfig.json`
+        * `tsconfig.json` contains compiler settings - when running `tsc` compiler looks at that setting file
+            * e.g. `rootDir` for location of source ts code, `outDir` for compiles js code
+        * `tsc -w` to watch all files in `rootDir`, when changed, automatically recompile everything
+            * open a second terminal to run files using `node build/file.js`
+        * to automate compiling and running, `npm install nodemon concurrently`, and in `package.json`:
+        ```json
+        "scripts": {
+            "start:build": "tsc -w",
+            "start:run": "nodemon build/index.js",
+            "start": "concurrently npm:start:*"
+        }
+        ```
+        with this, `npm start` will watch, compile and run automatically
 * VSCode shortcut
     * CMD+shift+p to bring up command palette, hide level 2 to collapse methods
     * CMD+click to jump thru definitions and all
